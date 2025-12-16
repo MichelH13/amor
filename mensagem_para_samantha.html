@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Samantha 💖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffe4e1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 24px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: textAppear 1s ease forwards;
+    }
+
+    p:nth-child(2) { animation-delay: 0.5s; }
+    p:nth-child(3) { animation-delay: 1.2s; }
+    p:nth-child(4) { animation-delay: 1.9s; }
+
+    @keyframes textAppear {
+      to { opacity: 1; }
+    }
+
+    .photo {
+      margin: 30px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid #f48fb1;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      animation: pulse 3s infinite;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .heart {
+      font-size: 2rem;
+      color: #e91e63;
+      animation: float 2.5s infinite ease-in-out;
+      margin-top: 20px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #e91e63, #ad1457);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hidden-message {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: #880e4f;
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1.05rem; }
+      .photo { width: 180px; height: 180px; }
+    }
+    .love-text {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #d81b60;
+      animation: lovePulse 2.5s infinite;
+    }
+
+    @keyframes lovePulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para você, Samantha 💕</h1>
+
+    <p>
+      Quero te agradecer por tudo. Estou muito feliz por você ter passado por mais um ano da faculdade
+      sem ficar de exame. Isso mostra o quanto você é forte, dedicada e incrível.
+    </p>
+
+    <p>
+      Tenho muito orgulho de você. Cada conquista sua me enche de alegria e admiração.
+      Mesmo nos momentos difíceis, você nunca deixou de tentar.
+    </p>
+
+    <p>
+      E quero que saiba: eu sempre acredito em você, mesmo quando você acha que não tem mais forças.
+      Eu estou aqui, torcendo, apoiando e comemorando cada vitória sua.
+    </p>
+
+    <div class="photo">
+      <!-- Substitua o caminho abaixo pela foto dela -->
+      <img src="amor.jpeg" alt="Foto da Samantha" />
+    </div>
+
+    <!-- Texto animado -->
+    <div class="love-text">Eu te amo, Mendes 💖</div>
+
+    <div class="heart">💖</div>
+
+    <!-- Música do Spotify -->
+    <div style="margin: 30px 0;">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5wcZuhzXFf7At0N0RmVV6b?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <button onclick="mostrarMensagem()">Clique aqui</button>
+
+    <div class="hidden-message" id="mensagemFinal">
+      Você é incrível, Samantha. Nunca se esqueça disso. 🌸
+    </div>
+
+    <footer>
+      Feito com carinho 💗
+    </footer>
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      const msg = document.getElementById('mensagemFinal');
+      msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
